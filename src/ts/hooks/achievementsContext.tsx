@@ -233,7 +233,7 @@ export class EmuchievementsState
 		return (async () =>
 		{
 			if (this._login === true) return true;
-			const authenticated = await this.serverAPI.fetchNoCors<{ body: string; status: number; }>(`https://retroachievements.org/API/API_GetAchievementOfTheWeek.php?z=${this.settings.retroachievements.username}&y=${this.settings.retroachievements.api_key}`);
+			const authenticated = await this.serverAPI.fetchNoCors<{ body: string; status: number; }>(`https://retroachievements.org/API/API_GetAchievementOfTheWeek.php?y=${this.settings.retroachievements.api_key}`);
 			if (authenticated.success)
 			{
 				this._login = authenticated.result.status === 200 && authenticated.result.body !== "Invalid API Key";
