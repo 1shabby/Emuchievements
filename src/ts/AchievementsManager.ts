@@ -392,7 +392,7 @@ export class AchievementManager implements Manager
 					body: string;
 					status: number;
 				}>(
-					`https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php?z=${settings.retroachievements.username}&y=${settings.retroachievements.api_key}&u=${settings.retroachievements.username}&g=${game_id}`,
+					`https://retroachievements.org/API/API_GetGameInfoAndUserProgress.php?y=${settings.retroachievements.api_key}&u=${settings.retroachievements.username}&g=${game_id}`,
 					{
 						headers: {
 							"User-Agent": `Emuchievements/${process.env.VERSION} (+https://github.com/EmuDeck/Emuchievements)`,
